@@ -35,6 +35,8 @@ main {
 
 /* Style the footer */
 footer {
+    width: 100%;
+    bottom: 0px;
     background-color: #333;
     color: white;
     text-align: center;
@@ -84,19 +86,6 @@ footer {
         .menu-log {
             right: auto;
             float: right; /* Floats the login link to the right */
-        }
-
-        footer {
-            width: 100%;
-            bottom: 0px;
-            background-color: #000;
-            color: #fff;
-            position: absolute;
-            padding-top: 20px;
-            padding-bottom: 50px;
-            text-align: center;
-            font-size: 30px;
-            font-weight: bold;
         }
 
         .body_sec {
