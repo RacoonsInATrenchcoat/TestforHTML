@@ -2,10 +2,24 @@ body {
     font-family: Arial, sans-serif;
     background-color: #284e3c;
     color: #ffffff;
+    margin: 0;
+    height: 100%; /* Ensure body takes up full height */
 }
 
 h1 {
     color: #f5f8fc;
+}
+
+.head1 {
+    font-size: 40px;
+    color: #009900;
+    font-weight: bold;
+}
+
+.head2 {
+    font-size: 17px;
+    margin-left: 10px;
+    margin-bottom: 15px;
 }
 
 button {
@@ -35,59 +49,41 @@ main {
 
 /* Style the footer */
 footer {
-    width: 100%;
-    bottom: 0px;
     background-color: #333;
     color: white;
     text-align: center;
     padding: 10px 0;
+    width: 100%;
 }
 
+/* Sticky menu */
+.menu {
+    position: sticky;
+    top: 0;
+    background-color: #009900;
+    padding: 10px 0px;
+    color: white;
+    margin: 0 auto;
+    overflow: hidden;
+}
 
-        .head1 {
-            font-size: 40px;
-            color: #009900;
-            font-weight: bold;
-        }
+.menu a {
+    float: left;
+    color: white;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+    font-size: 20px;
+}
 
-        .head2 {
-            font-size: 17px;
-            margin-left: 10px;
-            margin-bottom: 15px;
-        }
+/* .menu-log class is used to position the login link 
+      on the right side of the menu bar */
+.menu-log {
+    right: auto;
+    float: right;
+    /* Floats the login link to the right */
+}
 
-        body {
-            margin: 0 auto;
-            background-position: center;
-            background-size: contain;
-        }
-
-        .menu {
-            position: sticky;
-            top: 0;
-            background-color: #009900;
-            padding: 10px 0px 10px 0px;
-            color: white;
-            margin: 0 auto;
-            overflow: hidden;
-        }
-
-        .menu a {
-            float: left;
-            color: white;
-            text-align: center;
-            padding: 14px 16px;
-            text-decoration: none;
-            font-size: 20px;
-        }
-
-        /* .menu-log class is used to position the login link 
-              on the right side of the menu bar */
-        .menu-log {
-            right: auto;
-            float: right; /* Floats the login link to the right */
-        }
-
-        .body_sec {
-            margin-left: 20px;
-        }
+.body_sec {
+    margin-left: 20px;
+}
