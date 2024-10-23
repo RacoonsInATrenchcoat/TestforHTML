@@ -1,105 +1,186 @@
-<!-- 
- Anything between these two are considered comments!
- -->
-<!DOCTYPE html> <!-- Mandatory, lets the browser know it's a HTML5 type of file we are using.  -->
+<!DOCTYPE html>
+<html>
 
-<html> <!-- Mandatory, defines the code and has to contain ALL code.-->
+<head>
+    <title>Page Layout</title>
+    <style>
+        .head1 {
+            font-size: 40px;
+            color: #009900;
+            font-weight: bold;
+        }
 
-<head> <!-- Mandatory, header of the code that contains the metadata that browsers use.-->
-    <link rel="stylesheet" href="styles.css"> <!-- Link to CSS file -->
-    <meta charset="utf-8">
-    <title>
-        Title: Why are lizards objectively the best animal?
-    </title> <!-- Title or Name of the webpage. -->
+        .head2 {
+            font-size: 17px;
+            margin-left: 10px;
+            margin-bottom: 15px;
+        }
 
-</head> <!-- End of the header part.-->
+        body {
+            margin: 0 auto;
+            background-position: center;
+            background-size: contain;
+        }
 
-<body> <!-- Main body of the code, only things here are visible! -->
-    <h1> <!-- Heading, or chapter of the text. H1 is most important, and H6 is least important in that order. -->
-        H1: "Why are lizards objectively the best animal?"
-    </h1>
-    <p> <!-- Paragraph1, a block-level text, meaning it takes up the full width available and adds spacing above and below the text. -->
-        Lizard is the common name used for all squamate reptiles other than snakes. <br>
-        Lizards live in almost all contintents (except Antartica) and are hardy explorers. With their scaly skin, four
-        legs and tails, they can be quite agile adventurers!<br>
-    </p>
-    <h2>
-        H2: All about lizards!
-    </h2>
-    <ol>
-        <li>Main Characteristics</li>
+        .menu {
+            position: sticky;
+            top: 0;
+            background-color: #009900;
+            padding: 10px 0px 10px 0px;
+            color: white;
+            margin: 0 auto;
+            overflow: hidden;
+        }
 
-        <ul> <!--List! <ol> is the main list entry, <li> are the items in it. -->
-            <li>Habitat: Lizards inhabit a variety of environments, from deserts and forests to urban areas.</li>
-            <li>Diet: Most lizards are carnivorous, feeding on insects, small animals, or eggs, though some species are
-                herbivorous</li>
-            <li>Age range: The average age depends heavily on the breed of the lizard. Geckos can live for 10/15 years, chameleons are 5/7 years.<br>
-                Of course, this does not contain lizard wizards that have achieved immortality.
-            </li>
-        </ul>
-        <li>Secondary Characteristics
-            <ul>
-                <li>Movement: Some are able to run on water as they are just so <em>speedy!</em></li>
-                <li>Escape: Some lizards are able to detach their tails but not all will regenerate them later.</li>
-            </ul>
-    </ol>
-    <br> <!--<br> is linebreak, making the next line start anew. -->
-    <p>
-        This means that having lizards in your home is <strong>objectively</strong> a great idea, as it eats all the
-        annoying bugs in your bedroom, allowing you to sleep well, knowing they guard your dreams.
-    </p>
-    <h3>
-        H3: Why lizards make the best wizards!
-    </h3>
-    <ul>
-        <li>1, Cold-Blooded Nature: Their ability to regulate body temperature based on their surroundings reflects a
-            cool,
-            calm demeanor, perfect for a wizard mastering the balance of elements.</li>
-        <li>2, Regeneration: Been hit? Some lizards can regenerate their tails after losing them, symbolizing a wizard's
-            ability to heal, restore, or reinvent themselves through magic.</li>
-    </ul>
+        .menu a {
+            float: left;
+            color: white;
+            text-align: center;
+            padding: 14px 16px;
+            text-decoration: none;
+            font-size: 20px;
+        }
 
-    <p>I mean look at this wizard, who is, a lizard:<br>
-        <img src="https://i1.sndcdn.com/avatars-000644870121-4tx0sl-t240x240.jpg" alt="He is trying his best, okay?">
-    </p>
-    <h4>
-        Are you not conviced about lizards? Here is some Lizard Wizard propaganda to convince you:
-        <p><a href="https://www.youtube.com/watch?v=lkZd2lBQb2c">King Gizzard & The Lizard Wizard - O.N.E. (Official
-                Video)</a></p>
+        /* .menu-log class is used to position the login link 
+              on the right side of the menu bar */
+        .menu-log {
+            right: auto;
+            float: right; /* Floats the login link to the right */
+        }
 
-    </h4>
-    <h5>
-        <button>Hover over me to change color like a chameleon!</button>
-        <p> Still not convinced? Let's play a tic-tac-toe against a lizard:</p>
+        footer {
+            width: 100%;
+            bottom: 0px;
+            background-color: #000;
+            color: #fff;
+            position: absolute;
+            padding-top: 20px;
+            padding-bottom: 50px;
+            text-align: center;
+            font-size: 30px;
+            font-weight: bold;
+        }
 
-        <table> <!--Table with X and Y coordinates. -->
-            <tr>
-                <td>X</td>
-                <td>.</td>
-                <td>.</td>
-            </tr>
-            <tr>
-                <td>.</td>
-                <td>X</td>
-                <td>.</td>
-            </tr>
-            <tr>
-                <td>.</td>
-                <td>.</td>
-                <td>X</td>
-            </tr>
-        </table>
-    </h5>
-    <p>Oh. He already won before your first step. That is the magic of lizards</p>
+        .body_sec {
+            margin-left: 20px;
+        }
+    </style>
+</head>
+
+<body>
+
+    <!-- Header Section -->
+    <header>
+        <div class="head1">
+            Lizard Wizards
+        </div>
+        <div class="head2">
+            Why are lizards objectively the best animal?
+        </div>
+    </header>
+
+    <!-- Menu Navigation Bar -->
+    <nav class="menu">
+        <a href="#Researchers">RESEARCHERS</a>
+        <a href="#Sightings">SIGTHINGS</a>
+        <a href="#Something">SOMETHING</a>
+        <!-- menu-log class to float it to the right -->
+        <div class="menu-log">
+            <a href="#Dance Party">DANCE PARTY</a>
+        </div>
+    </nav>
+
+    <!-- Body section -->
+    <main class="body_sec">
+        <section id="Content">
+            <h3>
+                <h1> <!-- Heading, or chapter of the text. H1 is most important, and H6 is least important in that order. -->
+                    H1: "Why are lizards objectively the best animal?"
+                </h1>
+                <p> <!-- Paragraph1, a block-level text, meaning it takes up the full width available and adds spacing above and below the text. -->
+                    Lizard is the common name used for all squamate reptiles other than snakes. <br>
+                    Lizards live in almost all contintents (except Antartica) and are hardy explorers. With their scaly skin, four
+                    legs and tails, they can be quite agile adventurers!<br>
+                </p>
+                <h2>
+                    H2: All about lizards!
+                </h2>
+                <ol>
+                    <li>Main Characteristics</li>
+            
+                    <ul> <!--List! <ol> is the main list entry, <li> are the items in it. -->
+                        <li>Habitat: Lizards inhabit a variety of environments, from deserts and forests to urban areas.</li>
+                        <li>Diet: Most lizards are carnivorous, feeding on insects, small animals, or eggs, though some species are
+                            herbivorous</li>
+                        <li>Age range: The average age depends heavily on the breed of the lizard. Geckos can live for 10/15 years, chameleons are 5/7 years.<br>
+                            Of course, this does not contain lizard wizards that have achieved immortality.
+                        </li>
+                    </ul>
+                    <li>Secondary Characteristics
+                        <ul>
+                            <li>Movement: Some are able to run on water as they are just so <em>speedy!</em></li>
+                            <li>Escape: Some lizards are able to detach their tails but not all will regenerate them later.</li>
+                        </ul>
+                </ol>
+                <br> <!--<br> is linebreak, making the next line start anew. -->
+                <p>
+                    This means that having lizards in your home is <strong>objectively</strong> a great idea, as it eats all the
+                    annoying bugs in your bedroom, allowing you to sleep well, knowing they guard your dreams.
+                </p>
+                <h3>
+                    H3: Why lizards make the best wizards!
+                </h3>
+                <ul>
+                    <li>1, Cold-Blooded Nature: Their ability to regulate body temperature based on their surroundings reflects a
+                        cool,
+                        calm demeanor, perfect for a wizard mastering the balance of elements.</li>
+                    <li>2, Regeneration: Been hit? Some lizards can regenerate their tails after losing them, symbolizing a wizard's
+                        ability to heal, restore, or reinvent themselves through magic.</li>
+                </ul>
+            
+                <p>I mean look at this wizard, who is, a lizard:<br>
+                    <img src="https://i1.sndcdn.com/avatars-000644870121-4tx0sl-t240x240.jpg" alt="He is trying his best, okay?">
+                </p>
+                <h4>
+                    Are you not conviced about lizards? Here is some Lizard Wizard propaganda to convince you:
+                    <p><a href="https://www.youtube.com/watch?v=lkZd2lBQb2c">King Gizzard & The Lizard Wizard - O.N.E. (Official
+                            Video)</a></p>
+            
+                </h4>
+                <h5>
+                    <button>Hover over me to change color like a chameleon!</button>
+                    <p> Still not convinced? Let's play a tic-tac-toe against a lizard:</p>
+            
+                    <table> <!--Table with X and Y coordinates. -->
+                        <tr>
+                            <td>X</td>
+                            <td>.</td>
+                            <td>.</td>
+                        </tr>
+                        <tr>
+                            <td>.</td>
+                            <td>X</td>
+                            <td>.</td>
+                        </tr>
+                        <tr>
+                            <td>.</td>
+                            <td>.</td>
+                            <td>X</td>
+                        </tr>
+                    </table>
+                </h5>
+                <p>Oh. He already won before your first step. That is the magic of lizards</p>   
+            </h3>
+        </section>
+    </main>
+
+    <!-- Footer Section -->
+    <footer>
+        <h1>This is a foot.</h1>
+        <a href="sightings.html">Go to Sigthings</a>
+        <br>
+        <a href="researchers.html">Go to Researchers</a>
+    </footer>
 </body>
 
 </html>
-
-<footer>
-    <h1>Welcome to the Home Page</h1>
-    <a href="sightings.html">Go to Sigthings</a>
-    <br>
-    <a href="researchers.html">Go to Researchers</a>
-
-    Contact at:  lizardsnotblizzards@gmail.com
-</footer>
