@@ -1,0 +1,60 @@
+body {
+    background-image: url("https://media.istockphoto.com/id/996548108/photo/tropical-waterfall-lower-waikamoi-falls-and-a-small-crystal-clear-pond-inside-of-a-dense.webp?s=2048x2048&w=is&k=20&c=uuOF6xdi4AdiXJaf9t2X5Qn2JAb2rGI2Q0Tis2GMvc0=");
+    background-color: #cccccc;
+
+    background-size: cover;       /* Ensures the background covers the entire area */
+    background-position: center;   /* Centers the background image */
+    background-repeat: no-repeat;  /* Prevents the image from repeating */
+    
+    height: 100vh;                /* Sets the body height to the full viewport height */
+    margin: 0;                    /* Removes default margin */
+    position: relative;           /* Set the body as the positioning context */
+}
+
+.imageLizard1 {
+    position: relative;           /* Change to relative */
+    top: 55%;                    /* Move down 20% of the parent height */
+    left: 60%;                   /* Move right 60% of the parent width */
+    transform: translate(-50%, -50%); /* Adjust to center the image */
+    width: 20%;                  /* Set width to 20% of the parent */
+    height: auto;                /* Maintain aspect ratio */
+    transition: transform 0.5s ease; /* Smooth rotation transition */
+}
+
+.imagefish1 {
+    position: relative;           /* Change to relative */
+    top: 80%;                    /* Move down 30% of the parent height */
+    left: 55%;                   /* Move right 85% of the parent width */
+    transform: translate(-50%, -50%); /* Adjust to center the image */
+    width: 15%;                  /* Set width to 15% of the parent */
+    height: auto;                /* Maintain aspect ratio */
+    transition: transform 2s ease; /* Smooth transition */
+}
+
+
+.button1 {
+    padding: 20px 30px;
+    background-color: #c52222;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    position: relative;          /* Keep as relative */
+    top: 50%;                   /* Move down 50% of the parent height */
+    left: 35%;                  /* Center the button */
+    transform: translateX(-50%); /* Adjust to center the button */
+    height: auto;               /* Maintain aspect ratio */
+}
+
+
+.repeating-confetti-image {
+    display:none;
+    position: fixed; /* Change to fixed */
+    top: 0;         /* Align to top */
+    left: 0;        /* Align to left */
+    width: 100%; /* Set the desired width */
+    height: 100%; /* Set the desired height */
+    background-image: url("https://img.clipart-library.com/2/clip-transparent-confetti-gif/clip-transparent-confetti-gif-16.gif");
+    background-repeat: repeat; /* Repeat the image both horizontally and vertically */
+    z-index: -1;   /* Ensure it's behind other content */
+}
