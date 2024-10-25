@@ -55,7 +55,7 @@ document.addEventListener("DOMContentLoaded", function () {
         }, 2000); // Start the jump every 2 seconds
 
         // Play the music:
-        audioPlayer.volume = 0.75; // Set volume to 75%
+        audioPlayer.volume = 0.50; // Set volume to 50%
         audioPlayer.play();
 /*
         // Dragonfly motion
