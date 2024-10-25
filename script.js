@@ -2,6 +2,7 @@ document.addEventListener("DOMContentLoaded", function () {
     const rotateButton = document.getElementById("rotateButton");
     const imagefish1 = document.getElementById("imagefish1");
     const imageLizard1 = document.getElementById("imageLizard1");
+    const dragonfly = document.getElementById('dragonfly1');
     const confettiElement = document.querySelector('.repeating-confetti-image'); // Select the confetti element
 
     let rotationFish = 0;  // Variable to keep track of the current rotation for fish
@@ -51,11 +52,43 @@ document.addEventListener("DOMContentLoaded", function () {
             }
         }, 2000); // Start the jump every 2 seconds
 
-        // Stop the fish rotation after 10 seconds
+        //play the music:
+        audioPlayer.play();
+
+        //dragonfly motion
+
+        let angle = 0; // Starting angle
+        const radius = 100; // Radius of the circle
+        const centerX = window.innerWidth / 2; // Center X position
+        const centerY = window.innerHeight / 2; // Center Y position
+        let animationId; // Variable to hold the requestAnimationFrame ID
+
+        // Function to move the dragonfly in a circle
+        function moveInCircle() {
+            angle += 0.05; // Increment the angle for circular motion
+
+            // Calculate new X and Y positions
+            const x = centerX + radius * Math.cos(angle); // X position
+            const y = centerY + radius * Math.sin(angle); // Y position
+        
+            // Update the dragonfly's position
+            dragonfly.style.transform = `translate(${x}px, ${y}px)`;
+        
+            animationId = requestAnimationFrame(moveInCircle); // Continue the animation
+        }
+        //start the dragonfly motion
+        moveInCircle();
+
+        // Stop the fish rotation after 20 seconds
         setTimeout(() => {
             clearInterval(intervalIdFish); // Stop the fish rotation
             clearInterval(intervalIdJump); // Stop the lizard jump
             confettiElement.style.display = 'none'; // Hide the confetti again
-        }, 10000); // 10 seconds
+            audioPlayer.pause(); // Pause the audio
+            cancelAnimationFrame(animationId);
+        }, 20000); // 10 seconds
+
+
+
     });
 });
